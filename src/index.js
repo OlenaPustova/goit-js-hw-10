@@ -33,6 +33,7 @@ function inputSearch(e) {
     .catch(error => {
       countryListRef.innerHTML = '';
       countryInfoRef.innerHTML = '';
+      Notiflix.Notify.failure('Oops, there is no country with that name');
       error;
     });
 }
