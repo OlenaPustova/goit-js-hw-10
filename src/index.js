@@ -30,7 +30,11 @@ function inputSearch(e) {
         countryInfoRef.innerHTML = '';
       }
     })
-    .catch(error => error);
+    .catch(error => {
+      countryListRef.innerHTML = '';
+      countryInfoRef.innerHTML = '';
+      error;
+    });
 }
 
 function renderCountryList(countries) {
